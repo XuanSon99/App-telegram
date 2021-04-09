@@ -1,0 +1,34 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "A minimal Electron application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir"
+  },
+  "repository": "https://github.com/electron/electron-quick-start",
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
+  "author": "GitHub",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^10.1.3",
+    "electron-builder": "^22.9.1"
+  },
+  "dependencies": {
+    "group-array": "^1.0.0",
+    "lowdb": "^1.0.0",
+    "moment": "^2.29.1",
+    "mtproto-storage-fs": "^0.3.1",
+    "phone": "^2.4.21",
+    "telegram-mtproto": "^2.2.2",
+    "uuid": "^8.3.2",
+    "wait-console-input": "^0.1.7"
+  }
+}

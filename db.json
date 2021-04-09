@@ -1,0 +1,232 @@
+{
+  "accounts": [
+    {
+      "id": "05b73fa9-b08f-4d72-b823-51748d353103",
+      "phone": "+84839575644",
+      "code": "98663",
+      "api_id": "2977363",
+      "app_id": "ef82e70a33293188f8466dd083a743e9",
+      "user": {
+        "_": "user",
+        "flags": 1119,
+        "self": true,
+        "id": 1299195477,
+        "access_hash": "11040150436904675870",
+        "first_name": "Sơn",
+        "last_name": "Nguyễn",
+        "username": "xuanson99",
+        "phone": "84839575644",
+        "status": {
+          "_": "userStatusOnline",
+          "expires": 1617936609
+        }
+      },
+      "phone_code_hash": "08d271de41cde4e2e5",
+      "created_at": "4/9/2021"
+    }
+  ],
+  "scripts": [
+    {
+      "id": "fbc22e59-8a44-440e-abe3-101826f7eda1",
+      "script_name": "aaa",
+      "group_id": "543839212",
+      "group_name": "Testaaaa",
+      "details": [
+        {
+          "account_id": "05b73fa9-b08f-4d72-b823-51748d353103",
+          "account_name": "xuanson99",
+          "datetime": "2021-04-09T10:11:28+07:00",
+          "content": [
+            "aaaa"
+          ],
+          "is_run": true,
+          "id": "36f8ac9c-fd8f-467d-8c56-d632b4291bdc"
+        },
+        {
+          "account_id": "05b73fa9-b08f-4d72-b823-51748d353103",
+          "account_name": "xuanson99",
+          "datetime": "2021-04-09T10:12:28+07:00",
+          "content": [
+            "bbbbbbbb"
+          ],
+          "is_run": false,
+          "id": "9b4487c8-2765-4b43-af7a-273cb838aea1"
+        },
+        {
+          "account_id": "05b73fa9-b08f-4d72-b823-51748d353103",
+          "account_name": "xuanson99",
+          "datetime": "2021-04-09T10:12:28+07:00",
+          "content": [
+            "ccccccccccc"
+          ],
+          "is_run": false,
+          "id": "481b5ae0-b5b0-4888-aa11-8cb3eb499f11"
+        }
+      ],
+      "created_at": "4/9/2021, 9:45:29 AM"
+    }
+  ],
+  "groups": [
+    {
+      "_": "channel",
+      "flags": 8288,
+      "broadcast": true,
+      "id": 1197856924,
+      "access_hash": "5046493579221286922",
+      "title": "FACEBOOK Tips & тrιcks",
+      "username": "fbtricks",
+      "date": 1617123539,
+      "version": 0,
+      "channel_id": 1197856924,
+      "ids": "388d3031-91d2-4aba-9f77-07bfc36c53ca",
+      "account_id": "05b73fa9-b08f-4d72-b823-51748d353103",
+      "created_at": "4/9/2021"
+    },
+    {
+      "_": "chat",
+      "flags": 0,
+      "id": 543839212,
+      "title": "Testaaaa",
+      "participants_count": 3,
+      "date": 1615265785,
+      "version": 5,
+      "channel_id": 543839212,
+      "ids": "137dc02a-1f26-4519-82db-98736d25d337",
+      "account_id": "05b73fa9-b08f-4d72-b823-51748d353103",
+      "created_at": "4/9/2021"
+    },
+    {
+      "_": "chat",
+      "flags": 0,
+      "id": 517857867,
+      "title": "jscmarkets.com-content",
+      "participants_count": 8,
+      "date": 1612320164,
+      "version": 6,
+      "channel_id": 517857867,
+      "ids": "ebb3f618-98b1-48a7-bd94-18f66503b964",
+      "account_id": "05b73fa9-b08f-4d72-b823-51748d353103",
+      "created_at": "4/9/2021"
+    },
+    {
+      "_": "chat",
+      "flags": 0,
+      "id": 342070425,
+      "title": "Team FE",
+      "participants_count": 3,
+      "date": 1614090560,
+      "version": 1,
+      "channel_id": 342070425,
+      "ids": "90e16a28-4fb3-414d-aab1-fa31f604164c",
+      "account_id": "05b73fa9-b08f-4d72-b823-51748d353103",
+      "created_at": "4/9/2021"
+    },
+    {
+      "_": "chat",
+      "flags": 0,
+      "id": 572422792,
+      "title": "Frontend",
+      "participants_count": 9,
+      "date": 1613961549,
+      "version": 7,
+      "channel_id": 572422792,
+      "ids": "60e8451c-519d-4cab-93c8-941bb0c37fa9",
+      "account_id": "05b73fa9-b08f-4d72-b823-51748d353103",
+      "created_at": "4/9/2021"
+    },
+    {
+      "_": "chat",
+      "flags": 0,
+      "id": 597110246,
+      "title": "testAdd",
+      "participants_count": 2,
+      "date": 1616403529,
+      "version": 1,
+      "channel_id": 597110246,
+      "ids": "fe3e6aff-af6c-42b5-8954-87a900c376e2",
+      "account_id": "05b73fa9-b08f-4d72-b823-51748d353103",
+      "created_at": "4/9/2021"
+    },
+    {
+      "_": "chat",
+      "flags": 0,
+      "id": 520415276,
+      "title": "nhóm html metrade.io",
+      "participants_count": 4,
+      "date": 1613791007,
+      "version": 2,
+      "channel_id": 520415276,
+      "ids": "31fa3e0e-9fdf-4b0b-be94-9eacc47e384f",
+      "account_id": "05b73fa9-b08f-4d72-b823-51748d353103",
+      "created_at": "4/9/2021"
+    },
+    {
+      "_": "chat",
+      "flags": 0,
+      "id": 352325108,
+      "title": "apiNETWORK",
+      "participants_count": 4,
+      "date": 1600163175,
+      "version": 3,
+      "channel_id": 352325108,
+      "ids": "64d16c85-9b89-450c-a60f-a9e696f37988",
+      "account_id": "05b73fa9-b08f-4d72-b823-51748d353103",
+      "created_at": "4/9/2021"
+    },
+    {
+      "_": "chat",
+      "flags": 0,
+      "id": 423152200,
+      "title": "Timebet fresher",
+      "participants_count": 5,
+      "date": 1598331011,
+      "version": 3,
+      "channel_id": 423152200,
+      "ids": "ab659a58-35e4-4a5f-a633-9d6a3c38dd54",
+      "account_id": "05b73fa9-b08f-4d72-b823-51748d353103",
+      "created_at": "4/9/2021"
+    },
+    {
+      "_": "chat",
+      "flags": 0,
+      "id": 441034867,
+      "title": "app-market",
+      "participants_count": 3,
+      "date": 1602649474,
+      "version": 1,
+      "channel_id": 441034867,
+      "ids": "b7c6bae5-4d5d-457c-953e-72cd265f98b3",
+      "account_id": "05b73fa9-b08f-4d72-b823-51748d353103",
+      "created_at": "4/9/2021"
+    },
+    {
+      "_": "chat",
+      "flags": 0,
+      "id": 428944229,
+      "title": "Fresher",
+      "participants_count": 2,
+      "date": 1598865277,
+      "version": 2,
+      "channel_id": 428944229,
+      "ids": "c804c97c-c4ca-4eb5-b9af-d0895429ac02",
+      "account_id": "05b73fa9-b08f-4d72-b823-51748d353103",
+      "created_at": "4/9/2021"
+    },
+    {
+      "_": "channel",
+      "flags": 8228,
+      "left": true,
+      "broadcast": true,
+      "id": 1280356281,
+      "access_hash": "7043454067012202359",
+      "title": "MOVIE's FREE WORLD",
+      "date": 1531638698,
+      "version": 0,
+      "channel_id": 1280356281,
+      "ids": "56be1757-56cf-4ed0-9a79-1dca5e2f0eda",
+      "account_id": "05b73fa9-b08f-4d72-b823-51748d353103",
+      "created_at": "4/9/2021"
+    }
+  ],
+  "contacts": []
+}

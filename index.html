@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+  <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'"> -->
+  <title>Telegram App</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+  <div class="nav">
+    <div class="header">
+      <img src="./assets/1024px-Telegram_logo.svg.png" alt="">
+      <span>Telegram App</span>
+    </div>
+    <div class="menu">
+      <span class="active">Danh sách kịch bản </span>
+      <span>Danh sách tài khoản </span>
+      <span>Thêm tài khoản </span>
+      <span>Thêm kịch bản </span>
+      <span>Danh sách nhóm </span>
+      <!-- <span>Chuyển thành viên </span>
+      <span>Thêm thành viên </span> -->
+    </div>
+  </div>
+  <div class="bar">
+    <img src="assets/icon/menu.svg" onclick="openNav();" alt="">
+  </div>
+  <div class="content">
+    <div class="script-list">
+      <div class="table">
+        <table cellspacing="0">
+          <thead>
+            <tr>
+              <th>STT</th>
+              <th>Kịch bản</th>
+              <th>Group ID</th>
+              <th>Tên group</th>
+              <th>Created</th>
+              <th>Nội dung</th>
+              <th>Thao tác</th>
+            </tr>
+          </thead>
+          <tbody>
+
+          </tbody>
+        </table>
+      </div>
+      <div class="popup-detail">
+        <div class="form">
+          <label for="">Tài khoản</label>
+          <select class="select" id="select_account"></select>
+          <label for="">Thời gian</label>
+          <input type="datetime-local" name="" id="time_script">
+          <label for="">Nội dung</label>
+          <textarea id="script_content"></textarea>
+          <p id="error"></p>
+          <span onclick="addDetailScript()" class="btn">Thêm</span>
+        </div>
+        <div class="cover"></div>
+      </div>
+      <div class="popup-content">
+        <div>
+          <table cellspacing="0" class="table-content">
+            <thead>
+              <tr>
+                <th>STT</th>
+                <th>Username</th>
+                <th>Nội dung</th>
+                <th>Trạng thái</th>
+                <th>Thời gian</th>
+                <th>Thao tác</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+        </div>
+        <span class="btn">Thoát</span>
+      </div>
+    </div>
+    <div class="account-list">
+      <div class="table">
+        <table cellspacing="0">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Username</th>
+              <th>Phone</th>
+              <th>API ID</th>
+              <th>APP ID</th>
+              <th>Created</th>
+              <th>Thao tác</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+    <div class="add-account">
+      <form action="">
+        <label for="">Số điện thoại</label>
+        <input type="text" id="account_phone">
+        <label for="">API ID</label>
+        <input type="text" id="account_api_id">
+        <label for="">APP ID</label>
+        <input type="text" id="account_app_id">
+        <div class="div-confirm-code" style="display:none;">
+          <label for="">Mã xác nhận</label>
+          <input type="text" id="account_code">
+        </div>
+        <span onclick="addAccount()" class="btn" id="add_account_btn">Gửi Mã Login</span>
+        <span onclick="addAccountStep2()" class="btn" id="add_account_btn_step2">Thêm Tài Khoản</span>
+        <input type="hidden" id="phone_code_hash">
+      </form>
+    </div>
+    <div class="add-script">
+      <form action="">
+        <label for="">Tên kịch bản</label>
+        <input type="text" id="script_name">
+        <label for="">Group</label>
+        <select class="script_group" id="script_group"></select>
+        <span class="btn" onclick="addScript();">Thêm</span>
+      </form>
+    </div>
+    <div class="group-list">
+      <div class="table">
+        <table cellspacing="0">
+          <thead>
+            <tr>
+              <th>STT</th>
+              <th>Tên nhóm</th>
+              <th>Group ID</th>
+              <th>SĐT</th>
+              <th>Created Date</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+    <!-- <div class="transfer">
+      <form action="">
+        <label for="">Từ nhóm</label>
+        <select class="script_group" id="from_group"></select>
+        <label for="">Đến nhóm</label>
+        <select class="script_group" id="to_group"></select>
+        <label for="">Số thành viên</label>
+        <input type="number" id="number_members">
+        <span class="btn" onclick="transferMember();">Chuyển</span>
+      </form>
+    </div>
+    <div class="add-member">
+      <form action="">
+        <label for="">Username</label>
+        <textarea id="add_member_username"></textarea>
+        <label for="">Chọn nhóm</label>
+        <select class="script_group" id="add_member_group"></select>
+        <span class="btn" onclick="transferMember();">Chuyển</span>
+      </form>
+    </div>
+  </div> -->
+
+    <!-- You can also require other files to run in this process -->
+    <script src="./renderer.js"></script>
+    <script>
+      const { ipcRenderer, remote } = require('electron');
+      const { dialog } = remote;
+      function showAbout(type, title, message) {
+        //type warning, info, question, error
+        dialog.showMessageBox({
+          title: title,
+          buttons: ['Close'],
+          type: type,
+          message: message,
+        });
+      }
+
+
+    </script>
+    <script src="./assets/js/my_database.js"></script>
+    <script src="./assets/js/interface.js"></script>
+    <script src="./assets/js/telegram.js"></script>
+    <script src="./assets/js/add_script.js"></script>
+    <script src="./assets/js/worker.js"></script>
+</body>
+
+</html>

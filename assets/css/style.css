@@ -1,0 +1,477 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.nav {
+    height: 100vh;
+    width: 250px;
+    background: url("https://i.pinimg.com/originals/04/ef/5e/04ef5e1743f2123165f573616c533885.jpg") center;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    transition: all 400ms ease;
+}
+
+.nav .header {
+    width: 100%;
+    height: 60px;
+    background: #222;
+    box-shadow: 0 0 10px #000;
+    display: flex;
+    align-items: center;
+}
+
+.nav .header img {
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+    margin-left: 20px;
+    border-radius: 50%;
+}
+
+.nav .header span {
+    display: block;
+    margin-left: 10px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.nav .menu {
+    background: rgba(0, 0, 0, 0.8);
+    height: 100%;
+    padding-top: 10px;
+}
+
+.nav .menu span {
+    height: 50px;
+    color: #fff;
+    display: block;
+    line-height: 50px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: all 300ms ease;
+    border-radius: 5px;
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+
+.nav .menu span:hover {
+    background: rgba(255, 255, 255, 0.1);
+    padding-left: 20px;
+}
+
+.nav .menu span.active {
+    padding-left: 20px;
+    background: #01ABC2;
+    box-shadow: 0 0 5px #01ABC2;
+    /* background: #44d480; */
+    /* box-shadow: 0 4px 10px -2px #000; */
+}
+
+.bar {
+    height: 60px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 251px;
+    background: rgba(0, 0, 0, 0.8);
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    transition: all 400ms ease;
+}
+
+.bar img {
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(308deg) brightness(101%) contrast(101%);
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+}
+
+body {
+    background: url("https://i.pinimg.com/originals/04/ef/5e/04ef5e1743f2123165f573616c533885.jpg") center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.content {
+    width: calc(100% - 250px);
+    height: calc(100vh - 60px);
+    position: relative;
+    top: 60px;
+    left: 250px;
+    transition: all 400ms ease;
+}
+
+.content>div {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.6);
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.content .script-list {
+    display: block;
+}
+
+.content .table {
+    width: calc(100% - 40px);
+    margin: 20px;
+    height: 94%;
+    overflow: scroll;
+}
+
+.table::-webkit-scrollbar {
+    display: none;
+}
+
+table {
+    width: 100%;
+    border-radius: 5px;
+    color: #fff;
+}
+
+th:first-child {
+    border-radius: 10px 0 0 0;
+}
+
+th:last-child {
+    border-radius: 0 10px 0 0;
+}
+
+td, th {
+    padding: 15px 10px;
+    font-weight: normal;
+}
+
+table thead tr th {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+tbody tr:last-child td:first-child {
+    border-radius: 0 0 0 10px;
+}
+
+tbody tr:last-child td:last-child {
+    border-radius: 0 0 10px 0;
+}
+
+td {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    text-align: center;
+}
+
+tbody tr {
+    transition: all 100ms ease;
+    cursor: pointer;
+}
+
+tbody tr:not(:last-child) td {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+tbody tr:hover {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+form {
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 30px;
+    color: #fff;
+}
+
+form input, .script_group, .add-member textarea {
+    width: calc(100% - 30px);
+    height: 35px;
+    margin-bottom: 15px;
+    margin-top: 5px;
+    outline: none;
+    border-radius: 7px;
+    border: none;
+    background: none;
+    box-shadow: 2px 3px 8px 2px #000;
+    padding: 0 15px;
+    color: #fff;
+    display: block;
+}
+
+.add-member textarea {
+    height: 120px;
+    padding: 15px;
+    resize: none;
+}
+
+.script_group {
+    width: 100%;
+}
+
+.btn {
+    display: block;
+    width: 150px;
+    margin: 0 auto;
+    margin-top: 30px;
+    height: 35px;
+    border-radius: 7px;
+    border: none;
+    background: none;
+    color: #fff;
+    cursor: pointer;
+    background: #01ABC2;
+    transition: all 200ms ease;
+    box-shadow: 0 0 5px #01ABC2;
+    text-align: center;
+    line-height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn:hover {
+    background: none;
+    box-shadow: 0 0 15px #01ABC2, 0 0 5px #01ABC2;
+}
+
+#add_account_btn_step2 {
+    background: #ff5a47;
+    box-shadow: 0 0 5px #ff5a47;
+    transition: all 200ms ease;
+    display: none;
+}
+
+#add_account_btn_step2:hover {
+    background: none;
+    box-shadow: 0 0 15px #ff5a47, 0 0 5px #ff5a47;
+}
+
+#error {
+    color: #ff5a47;
+}
+
+.popup-detail textarea, .select, .popup-detail input {
+    width: calc(100% - 30px);
+    height: 35px;
+    margin-bottom: 15px;
+    margin-top: 10px;
+    outline: none;
+    border-radius: 7px;
+    border: none;
+    background: none;
+    box-shadow: 0 0 5px #01ABC2;
+    padding: 0 15px;
+    color: #000;
+    display: block;
+    background: #fff
+}
+
+.popup-detail textarea {
+    height: 120px;
+    padding: 15px;
+    resize: none;
+}
+
+.popup-detail .btn {
+    margin-top: 10px;
+}
+
+#select_account {
+    width: 100%;
+}
+
+.cover {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: -999;
+    top: 0;
+    left: 0;
+}
+
+.popup-detail, .popup-content {
+    display: none;
+    position: fixed;
+    background: #222;
+    top: 20vh;
+    left: 40vw;
+    z-index: 999;
+    border-radius: 10px;
+    box-shadow: 2px 3px 8px 2px #000;
+    color: #fff;
+}
+
+.table-content td, .table-content th {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.table-content tr td:last-child, .table-content tr td:nth-child(3) {
+    text-align: left;
+}
+
+.table-content tbody textarea {
+    outline: none;
+    color: #fff;
+    background: none;
+    border: 1px solid #999;
+    padding: 10px;
+}
+
+.table-content tbody textarea::-webkit-scrollbar {
+    display: none;
+}
+
+.table-content .success {
+    display: none;
+    width: 60px;
+}
+
+.table-content tbody textarea:read-only, .table-content tbody input:read-only {
+    outline: none;
+    color: #fff;
+    background: none;
+    border: none;
+}
+
+/* .table-content tr {
+    pointer-events: none;
+} */
+
+.table-content td {
+    background: #222;
+}
+
+.table-content th {
+    background: rgb(24, 24, 24);
+}
+
+.table-content {
+    border-radius: 12px;
+}
+
+.popup-content {
+    top: 15vh;
+    left: 30vw;
+    width: 800px;
+    padding: 30px;
+}
+
+.popup-content .btn {
+    background: #ff5a47;
+    box-shadow: 0 0 5px #ff5a47;
+    margin-top: 20px;
+    width: 120px;
+}
+
+.popup-content .btn:hover {
+    background: none;
+    box-shadow: 0 0 15px #ff5a47, 0 0 5px #ff5a47;
+}
+
+.popup-content div {
+    width: 100%;
+    max-height: 440px;
+    overflow: scroll;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+}
+
+.popup-content div::-webkit-scrollbar {
+    display: none;
+}
+
+.popup-detail .form {
+    width: 100%;
+    height: 100%;
+    padding: 30px 50px;
+    background: #222;
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px 2px #000;
+}
+
+.script_group option {
+    color: #000;
+}
+
+table button {
+    border: none;
+    outline: none;
+    color: #fff;
+    border-radius: 4px;
+    transition: all 200ms ease;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+}
+
+table button:hover {
+    opacity: 0.8;
+}
+
+table button.success {
+    background: #01ABC2;
+    box-shadow: 0 0 5px #01ABC2;
+    height: 25px;
+    width: 100px;
+}
+
+table button.danger {
+    background: #ff5a47;
+    box-shadow: 0 0 5px #ff5a47;
+    height: 25px;
+    width: 40px;
+}
+
+table button.warning {
+    background: #6947ff;
+    box-shadow: 0 0 5px #6947ff;
+    height: 25px;
+    width: 60px;
+}
+
+.loader {
+    border: 3px solid #fff;
+    border-top: 3px solid #3498db;
+    width: 10px;
+    height: 10px;
+    -webkit-animation: spin 1s linear infinite;
+    /* Safari */
+    animation: spin 1s linear infinite;
+}
+
+/* Safari */
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
